@@ -9,7 +9,8 @@ const Header = { Accecpt : "application/json"}
 export default new Vuex.Store({
   state: {
     currentUser : [],
-    allUsers : []
+    allUsers : [],
+    currentUsers : [],
   },
   mutations: {
     setCurrentUser(state,payload){
@@ -20,20 +21,32 @@ export default new Vuex.Store({
       // console.log(state)
       state.currentUser.push(payload);
       state.allUsers.push(payload);
+    },
+    setCurrentUsers(state, payload) {
+        // console.log(payload)
+        state.currentUsers.push(payload);
+      
     }
   },
   actions: {
-    async setCurrentUser(state,payload){
+    async setCurrentUser(state, payload){
       const user = await fetch(url + payload, { Header });
       const data = await user.json();
       
       state.commit('setCurrentUser' ,data);
+    },
+    setCurrentUsers(state, payload) {
+      // console.log("test",payload)
+      const data = payload
+      state.commit('setCurrentUsers',data);
     }
   },
   modules: {
   },
   getters: {
     getUser : state => state.currentUser,
-    getAllUser : state => state.allUsers
+    getAllUser : state => state.allUsers,
+
+    getUsers : state => state.currentUsers,
   }
 })

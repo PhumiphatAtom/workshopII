@@ -5,7 +5,6 @@
 
     <button type="submit" class="btn btn-primary" @click="add"> + {{ counterR }}</button>
     <!-- <button type="submit" class="btn btn-primary" @click="addReactive"> - {{ counterReactive.ct }}</button> -->
-
   </div>
 </template>
 
