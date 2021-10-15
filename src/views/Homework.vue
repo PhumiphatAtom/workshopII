@@ -2,7 +2,7 @@
   <div>
     <h1>HomeWork</h1>
     <div class="form-group">
-      <label>Name</label>
+      <label>First Name</label>
       <br />
       <input
         type="text"
@@ -11,6 +11,7 @@
         v-model="fname"
       />
       <br>
+      <label>Last Name</label>
       <input
         type="text"
         class="form-control"
@@ -18,6 +19,7 @@
         v-model="lname"
       />
       <br>
+      <label>Age</label>
       <input
         type="text"
         class="form-control"
@@ -26,7 +28,7 @@
       />
     </div>
     <br>
-    <button type="submit" class="btn btn-primary" @click="addUser">Submit</button>
+    <button type="submit" class="btn btn-success" @click="addUser" style="width: 126px;">Submit</button>
   </div>
 </template>
 <script>
@@ -47,4 +49,6 @@ export default {
   },
 };
 </script>
-<style lang=""></style>
+<style lang="">
+
+</style>
