@@ -7,7 +7,7 @@
       <input
         type="text"
         class="form-control"
-        placeholder="Enter your name"
+        placeholder="Enter your First name"
         v-model="fname"
       />
       <br>
@@ -15,7 +15,7 @@
       <input
         type="text"
         class="form-control"
-        placeholder="Enter your name"
+        placeholder="Enter your Last name"
         v-model="lname"
       />
       <br>
@@ -23,7 +23,7 @@
       <input
         type="text"
         class="form-control"
-        placeholder="Enter your name"
+        placeholder="Enter your Age"
         v-model="age"
       />
     </div>
